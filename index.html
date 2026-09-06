@@ -1,1 +1,543 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Happy Birthday Alia ♡</title>
+
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Georgia,"Times New Roman",serif;
+  background:#fff5f8;
+  color:#5d4050;
+  overflow-x:hidden;
+}
+
+/* BACKGROUND */
+body{
+  background:
+    radial-gradient(circle at 10% 10%,#ffdce8 0,transparent 28%),
+    radial-gradient(circle at 90% 20%,#ffe9c7 0,transparent 25%),
+    radial-gradient(circle at 50% 90%,#eadcff 0,transparent 30%),
+    #fff7fa;
+}
+
+/* FLOATING HEARTS */
+.heart{
+  position:fixed;
+  pointer-events:none;
+  z-index:0;
+  opacity:.35;
+  animation:float 6s infinite ease-in-out;
+}
+
+.h1{left:8%;top:15%;font-size:25px}
+.h2{right:10%;top:25%;font-size:20px;animation-delay:1s}
+.h3{left:15%;bottom:15%;font-size:18px;animation-delay:2s}
+.h4{right:15%;bottom:20%;font-size:28px;animation-delay:3s}
+
+@keyframes float{
+  50%{
+    transform:translateY(-25px) rotate(8deg);
+  }
+}
+
+/* HERO */
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:25px;
+  position:relative;
+  z-index:1;
+}
+
+.hero-card{
+  max-width:650px;
+  width:100%;
+  padding:45px 25px;
+  border-radius:35px;
+  background:rgba(255,255,255,.72);
+  border:2px solid rgba(255,190,210,.55);
+  box-shadow:0 20px 60px rgba(180,110,140,.15);
+  backdrop-filter:blur(15px);
+}
+
+.mini{
+  color:#d887a5;
+  letter-spacing:4px;
+  font-size:11px;
+  text-transform:uppercase;
+  margin-bottom:18px;
+}
+
+h1{
+  font-size:clamp(45px,12vw,80px);
+  line-height:1;
+  font-weight:400;
+  font-style:italic;
+  color:#70495c;
+}
+
+h1 span{
+  display:block;
+  color:#e88eae;
+}
+
+.hero p{
+  margin:25px auto;
+  max-width:500px;
+  line-height:1.8;
+  font-size:16px;
+}
+
+.btn{
+  border:none;
+  padding:15px 27px;
+  border-radius:999px;
+  background:#ef9fbd;
+  color:white;
+  font-family:inherit;
+  font-size:15px;
+  cursor:pointer;
+  box-shadow:0 10px 25px rgba(220,130,165,.25);
+  transition:.25s;
+}
+
+.btn:hover{
+  transform:translateY(-3px);
+}
+
+/* SECTIONS */
+section.content{
+  max-width:900px;
+  margin:auto;
+  padding:80px 20px;
+  position:relative;
+  z-index:1;
+}
+
+.title{
+  text-align:center;
+  margin-bottom:30px;
+}
+
+.title small{
+  color:#d989a6;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  font-size:10px;
+}
+
+.title h2{
+  margin-top:10px;
+  font-size:38px;
+  font-style:italic;
+  font-weight:400;
+  color:#71495b;
+}
+
+/* LETTER */
+.letter{
+  background:rgba(255,255,255,.75);
+  border:2px solid #f7d4df;
+  border-radius:30px;
+  padding:30px;
+  line-height:2;
+  box-shadow:0 15px 40px rgba(170,100,130,.1);
+  white-space:pre-line;
+}
+
+.signature{
+  text-align:right;
+  margin-top:20px;
+  color:#db86a7;
+  font-style:italic;
+  font-size:20px;
+}
+
+/* PHOTOS */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:15px;
+}
+
+.photo{
+  aspect-ratio:1/1;
+  border-radius:25px;
+  overflow:hidden;
+  background:#ffe9f0;
+  border:5px solid white;
+  box-shadow:0 12px 30px rgba(160,100,120,.14);
+}
+
+.photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  transition:.4s;
+}
+
+.photo:hover img{
+  transform:scale(1.06);
+}
+
+/* WISHES */
+.wishes{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:15px;
+}
+
+.wish{
+  background:rgba(255,255,255,.72);
+  border:2px solid #f5d6e0;
+  border-radius:25px;
+  padding:25px;
+  line-height:1.8;
+}
+
+.wish b{
+  display:block;
+  color:#dc88a6;
+  font-size:20px;
+  margin-bottom:8px;
+}
+
+/* FINAL */
+.final{
+  text-align:center;
+  padding-bottom:120px !important;
+}
+
+.big-heart{
+  font-size:60px;
+  animation:pulse 1.7s infinite;
+}
+
+@keyframes pulse{
+  50%{
+    transform:scale(1.15);
+  }
+}
+
+.final h2{
+  margin:15px 0;
+  font-size:38px;
+  font-style:italic;
+  font-weight:400;
+}
+
+.final p{
+  max-width:550px;
+  margin:auto;
+  line-height:1.9;
+}
+
+/* MUSIC */
+.music{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  z-index:10;
+  width:55px;
+  height:55px;
+  border-radius:50%;
+  border:3px solid white;
+  background:#ee9fbd;
+  color:white;
+  font-size:22px;
+  cursor:pointer;
+  box-shadow:0 8px 25px rgba(200,100,140,.3);
+}
+
+/* MOBILE */
+@media(max-width:600px){
+  .hero-card{
+    padding:40px 20px;
+  }
+
+  section.content{
+    padding:60px 17px;
+  }
+
+  .gallery{
+    gap:10px;
+  }
+
+  .wishes{
+    grid-template-columns:1fr;
+  }
+
+  .letter{
+    padding:22px;
+    font-size:15px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Hiasan -->
+<div class="heart h1">♡</div>
+<div class="heart h2">♡</div>
+<div class="heart h3">✦</div>
+<div class="heart h4">🌷</div>
+
+<!-- HERO -->
+<section class="hero">
+
+  <div class="hero-card">
+
+    <div class="mini">
+      a little surprise for you ♡
+    </div>
+
+    <h1>
+      Happy Birthday
+      <span>Alia</span>
+    </h1>
+
+    <p>
+      Hari ini adalah hari spesial untuk seseorang
+      yang pantas mendapatkan banyak senyum,
+      kebahagiaan, dan hal-hal baik. 🎀
+    </p>
+
+    <button class="btn" onclick="openSurprise()">
+      Buka Surprise ✨
+    </button>
+
+  </div>
+
+</section>
+
+
+<!-- SURAT -->
+<section class="content">
+
+  <div class="title">
+    <small>from someone who cares</small>
+    <h2>Untuk Alia Qarira Ulfah 💌</h2>
+  </div>
+
+  <div class="letter">
+
+Hai, Alia. ♡
+
+Selamat ulang tahun yang ke-16! 🎂
+
+Semoga di umur yang baru ini,
+hari-harimu dipenuhi banyak hal baik.
+
+Semoga semua mimpi yang kamu punya
+pelan-pelan bisa menjadi kenyataan.
+
+Semoga kamu selalu dikelilingi
+orang-orang yang tulus menyayangi kamu.
+
+Kalau suatu hari ada hari yang berat,
+semoga kamu selalu menemukan alasan
+untuk tetap tersenyum dan terus melangkah.
+
+Terima kasih sudah menjadi seseorang
+yang begitu berharga.
+
+Nikmati hari spesialmu ya.
+
+Hari ini adalah tentang kamu. 🌷
+
+    <div class="signature">
+      — Hasbi Syahraihan ♡
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FOTO -->
+<section class="content">
+
+  <div class="title">
+    <small>our little memories</small>
+    <h2>Beberapa Momen 📸</h2>
+  </div>
+
+  <div class="gallery">
+
+    <div class="photo">
+      <img src="foto1.jpg" alt="Kenangan Alia 1">
+    </div>
+
+    <div class="photo">
+      <img src="foto2.jpg" alt="Kenangan Alia 2">
+    </div>
+
+    <div class="photo">
+      <img src="foto3.jpg" alt="Kenangan Alia 3">
+    </div>
+
+    <div class="photo">
+      <img src="foto4.jpg" alt="Kenangan Alia 4">
+    </div>
+
+    <div class="photo">
+      <img src="foto5.jpg" alt="Kenangan Alia 5">
+    </div>
+
+    <div class="photo">
+      <img src="foto6.jpg" alt="Kenangan Alia 6">
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- HARAPAN -->
+<section class="content">
+
+  <div class="title">
+    <small>for your new chapter</small>
+    <h2>Harapan untukmu 🌸</h2>
+  </div>
+
+  <div class="wishes">
+
+    <div class="wish">
+      <b>♡ Semoga bahagia</b>
+      Semoga selalu ada hal kecil
+      yang membuat kamu tersenyum.
+    </div>
+
+    <div class="wish">
+      <b>✦ Semoga tercapai</b>
+      Semoga semua mimpi dan cita-citamu
+      satu per satu menjadi nyata.
+    </div>
+
+    <div class="wish">
+      <b>🌷 Semoga kuat</b>
+      Kalau ada hari yang berat,
+      semoga kamu selalu menemukan
+      alasan untuk terus melangkah.
+    </div>
+
+    <div class="wish">
+      <b>🎀 Tetap jadi kamu</b>
+      Jangan pernah kehilangan
+      sisi baik dan indah dari dirimu sendiri.
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- PENUTUP -->
+<section class="content final">
+
+  <div class="big-heart">
+    ♡
+  </div>
+
+  <h2>
+    Once again, Happy Birthday.
+  </h2>
+
+  <p>
+    Selamat datang di usia 16 tahun, Alia.
+    Semoga bab baru ini membawa lebih banyak
+    cerita indah, tawa, dan kenangan
+    yang layak untuk diingat. 💗
+  </p>
+
+  <br>
+
+  <button class="btn" onclick="alert('Semoga kamu suka surprise kecil ini, Alia ♡')">
+    Pesan Terakhir 💌
+  </button>
+
+</section>
+
+
+<!-- MUSIK -->
+<audio id="music" loop>
+  <source src="musik.mp3" type="audio/mpeg">
+</audio>
+
+<button class="music" onclick="toggleMusic()" id="musicBtn">
+  ♫
+</button>
+
+
+<script>
+
+function openSurprise(){
+
+  document.querySelectorAll("section.content")
+  .forEach((section,index)=>{
+    setTimeout(()=>{
+      section.scrollIntoView({
+        behavior:"smooth"
+      });
+    },index * 100);
+  });
+
+  // coba mulai musik setelah user menekan tombol
+  const music=document.getElementById("music");
+
+  music.play().then(()=>{
+    document.getElementById("musicBtn").textContent="❚❚";
+  }).catch(()=>{});
+
+}
+
+
+let playing=false;
+
+function toggleMusic(){
+
+  const music=document.getElementById("music");
+  const button=document.getElementById("musicBtn");
+
+  if(!playing){
+
+    music.play().then(()=>{
+      playing=true;
+      button.textContent="❚❚";
+    }).catch(()=>{
+      alert("Pastikan file musik.mp3 sudah diupload ke repository.");
+    });
+
+  }else{
+
+    music.pause();
+    playing=false;
+    button.textContent="♫";
+
+  }
+
+}
+
+</script>
+
+</body>
+</html>
